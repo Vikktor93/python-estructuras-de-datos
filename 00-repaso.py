@@ -12,22 +12,22 @@ print("Esta es otra lista vacia:",otra_lista)
 print(type(otra_lista))
 
 #Declarando tres listas diferentes listas
-estudiantes = ["Matias", "Marco", "Cristobal", "Sebastián", "Marco"]
+estudiantes = ["Sebastian", "Antoine", "Cristobal", "Sebastián", "Gerardo"]
 num = [1,2,3,4,5,6]
 lenguaje = ["Python"]
 
 
-# ¿Se puede realizar una lista de datos compuestos?
-data = ['Osorno', {'UV': 'nivel bajo', 'Temp °C': 15}, (-40.5725, -73.1353)]
+#¿Se puede realizar una lista de datos compuestos?
+#data = ['Osorno', {'UV': 'nivel bajo', 'Temp °C': 15}, (-40.5725, -73.1353)]
 
 print("Lista de cadena de caracteres:",estudiantes)
 print("Lista de números:",num)
 print("Lista de un elemento:",lenguaje)
-print("Esto igual es una lista:",data)
+#print("Esto igual es una lista:",data)
 print(len(lenguaje)) #para saber la cantidad de elementos de una lista
-print(estudiantes.count("Marco")) #cantidad de ocurrencias de un elemento en especifico dentro de la lista
+print(estudiantes.count("Sebastian")) #cantidad de ocurrencias de un elemento en especifico dentro de la lista
 
-lenguaje = ["JavaScript"]
+lenguaje = ["Dart"]
 print("Nuevo valor del Arreglo de un elemento:",lenguaje)
 
 #¿Como accedo a un elemento especifico de la lista?
@@ -38,11 +38,11 @@ print("Posicion -2",estudiantes[-2]) #impresión desde atras hacia adelante
 
 
 #Reasignando el valor de la posición 3 de la lista
-estudiantes[3] = "Gabriela"
+estudiantes[3] = "Tomas"
 print("El nuevo arreglo de estudiantes es:",estudiantes)
 
 #Inicializando otra lista de datos mixtos
-data_asig = [10023,"Programación",1,True]
+data_asig = [10023,"Estructura de Datos",3,True]
 
 #¿Que hace este código?       #Desempaquetando elementos de la lista a variables
 cod,ramo,semestre,estado = data_asig
@@ -52,36 +52,34 @@ print(ramo)
 print("Suma de listas",estudiantes + num)
 
 #¿Qué operaciones hacen estas funciones?
-print(list("Python"))
+print(list("Ruby"))
 print(list(range(10)))
 print("\n")
 
-##### En el fichero de listas se mostrarán más funciones #####
-
-#02 - TUPLAS -            (No mutables)
+#02 - TUPLAS - (No mutables)
 newtupla = tuple()
-grupo1 = ("Daniel","Cristian","Felipe",200,100,"Daniel")
+grupo1 = ("Joaquin","Niska","Felipe",200,100,"Natalia")
 print("######## 02-TUPLAS ########")
 print(type(grupo1))
 
 #Accediendo al primer elemento de la tupla
 print(grupo1[0])
 
-#Consultando el elemento "Daniel" cuantas veces se encuentra en la tupla
-print("El elemento se repite:",grupo1.count("Daniel"))
+#Consultando el elemento "Natalia" cuantas veces se encuentra en la tupla
+print("El elemento se repite:",grupo1.count("Natalia"))
 
 #Muestra el indice del primer elemento buscado
-print("Indice del elemento:",grupo1.index ("Daniel"))
+print("Indice del elemento:",grupo1.index ("Natalia"))
 
 #Reasignando el primer elemento de la tupla
-"""grupo1[0] = "Constanza"
+"""grupo1[0] = "Andres"
 print(grupo1)"""
 
 #¿Se pueden sumar las tuplas?
 
 
 #Obteniendo un trozo de la tupla
-grupo2 = ("Pedro",100,"Felipe","Diego",2020,"Alejandra")
+grupo2 = ("Melian",100,"Luis","Miguel",2020,"Dante")
 print("Trozo de la tupla",grupo2[0:3])
 
 #¿Entonces como no puedo modificar una tupla, que puedo hacer?
