@@ -1,58 +1,59 @@
 from array import *
 
-# Función para pedir los elementos de una matriz por teclado
-def pedir_matriz(filas, columnas):
-    matriz = []
+#Función para solicitar los elementos de una matriz por consola
+def solicitud_matriz(filas, columnas):
+    m = []
     for i in range(filas):
         fila = []
         for j in range(columnas):
-            elemento = float(input(f"Elemento ({i+1}, {j+1}): "))
+            elemento = int(input(f"Elemento ({i+1}, {j+1}): "))
             fila.append(elemento)
-        matriz.append(fila)
-    return matriz
+        m.append(fila)
+    return m
 
-# Función para sumar dos matrices
-def sumar_matrices(matriz1, matriz2):
-    matriz_resultante = []
-    for i in range(len(matriz1)):
+#Funcion para restar matrices
+def resta_matriz(m1, m2):
+    matriz_final = []
+    for i in range(len(m1)):
         fila = []
-        for j in range(len(matriz1[0])):
-            suma = matriz1[i][j] + matriz2[i][j]
-            fila.append(suma)
-        matriz_resultante.append(fila)
-    return matriz_resultante
-
-# Función para restar dos matrices
-def restar_matrices(matriz1, matriz2):
-    matriz_resultante = []
-    for i in range(len(matriz1)):
-        fila = []
-        for j in range(len(matriz1[0])):
-            resta = matriz1[i][j] - matriz2[i][j]
+        for j in range(len(m1[0])):
+            resta = m1[i][j] - m2[i][j]
             fila.append(resta)
-        matriz_resultante.append(fila)
-    return matriz_resultante
+        matriz_final.append(fila)
+    return matriz_final
 
-# Pedimos la cantidad de filas y columnas para ambas matrices
-filas = int(input("Ingrese la cantidad de filas: "))
-columnas = int(input("Ingrese la cantidad de columnas: "))
+#Funcion para sumar matrices
+def suma_matriz(m1, m2):
+    matriz_final = []
+    for i in range(len(m1)):
+        fila = []
+        for j in range(len(m1[0])):
+            suma = m1[i][j] + m2[i][j]
+            fila.append(suma)
+        matriz_final.append(fila)
+    return matriz_final
 
-# Creamos la primera matriz ingresando sus valores por teclado
+#Solicitando la cantidad de filas y columnas de las 2 matrices
+filas = int(input("Ingrese la cantidad de filas de la matriz: "))
+columnas = int(input("Ingrese la cantidad de columnas matriz: "))
+
+#Creando la 1ra matriz e ingresando los elementos por consola
 print("Ingrese los elementos de la primera matriz:")
-matriz1 = pedir_matriz(filas, columnas)
+m1 = solicitud_matriz(filas, columnas)
 
-# Creamos la segunda matriz ingresando sus valores por teclado
+#Creando la 2da matriz e ingresando los elementos por consola
 print("Ingrese los elementos de la segunda matriz:")
-matriz2 = pedir_matriz(filas, columnas)
+m2 = solicitud_matriz(filas, columnas)
 
-# Sumamos las dos matrices y mostramos el resultado
-matriz_resultante = sumar_matrices(matriz1, matriz2)
-print("La suma de las matrices es:")
-for fila in matriz_resultante:
-    print(fila)
-
-# Restamos las dos matrices y mostramos el resultado
-matriz_resultante = restar_matrices(matriz1, matriz2)
+#Se restan las dos matrices y se muestra el resultado de la operación
+matriz_final = resta_matriz(m1, m2)
 print("La resta de las matrices es:")
-for fila in matriz_resultante:
+for fila in matriz_final:
     print(fila)
+
+#Se suman las dos matrices y se muestra el resultado de la operación
+matriz_final = suma_matriz(m1, m2)
+print("La suma de las matrices es:")
+for fila in matriz_final:
+    print(fila)
+
