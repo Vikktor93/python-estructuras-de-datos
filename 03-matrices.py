@@ -1,11 +1,9 @@
 ### GUIA RÁPIDA MATRICES EN PYTHON ###
 # Docente: Victor Saldivia Vera - Institución: Universidad de Los Lagos
 
-#Declarando una matriz y su respectiva impresión
-
+#Declarando una matriz con elementos y otra vacia
 m1 = [[1,2,3],[4,5,6]]
 m2 = []
-
 
 print('Matriz 1:', m1)
 
