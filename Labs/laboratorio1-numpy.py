@@ -1,41 +1,38 @@
 import numpy as np
 
-#Función que solicita los elementos de la matriz por consola
-def elementos_matriz(filas, columnas):
-    m = np.zeros((filas, columnas))
-    for i in range(filas):
-        for j in range(columnas):
-            m[i][j] = int(input(f"Elemento ({i+1}, {j+1}): "))
-    return m
+def suma(m1, m2):
+    m_final_suma = np.add(m1, m2)
+    return m_final_suma
 
-#Resta de las 2 matrices
-def resta_matrices(m1, m2):
-    return m1 - m2
+def resta(m1, m2):
+    m_final_resta = np.subtract(m1, m2)
+    return m_final_resta
 
-#Suma de las 2 matrices
-def suma_matrices(m1, m2):
-    return m1 + m2
-
-#Se solicita la cantidad de filas y columnas por consola
 filas = int(input("Ingrese la cantidad de filas de la matriz: "))
 columnas = int(input("Ingrese la cantidad de columnas de la matriz: "))
 
-#Se crea la primera matriz
-print("Ingrese los elementos de la primera matriz:")
-m1 = elementos_matriz(filas, columnas)
+#Ingreso de elementos Matriz 1
+print("Ingresando los elementos de la matriz 1:")
+m1 = np.zeros((filas, columnas)) 
+for i in range(filas):
+    for j in range(columnas):
+        elem  = int(input(f"Ingrese el elemento [{i}][{j}]: "))
+        m1[i][j] = elem
 
-#Se crea la segunda matriz
-print("Ingrese los elementos de la segunda matriz:")
-m2 = elementos_matriz(filas, columnas)
+#Ingreso de elementos Matriz 2
+print("\nIngresando los elementos de la matriz 2:")
+m2 = np.zeros((filas, columnas)) 
+for i in range(filas):
+    for j in range(columnas):
+        elem = int(input(f"Ingrese el elemento [{i}][{j}]: "))
+        m2[i][j] = elem
 
+#Suma Matrices
+m_final_suma = suma(m1, m2)
+print("\nLa matriz resultado de la suma es:")
+print(m_final_suma)
 
-#Se resta las 2 matrices y se imprime
-matriz_final = resta_matrices(m1, m2)
-print("La resta de las matrices es:")
-print(matriz_final)
-
-#Se suma las 2 matrices y se imprime
-matriz_final = suma_matrices(m1, m2)
-print("La suma de las matrices es:")
-print(matriz_final)
-
+#Resta Matrices
+m_final_resta = resta(m1, m2)
+print("\nLa matriz resultado de la resta es:")
+print(m_final_resta)
